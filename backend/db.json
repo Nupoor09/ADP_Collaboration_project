@@ -1,11 +1,6 @@
 {
   "products": [
-    {
-      "name": "rushi",
-      "desc": "first blog",
-      "id": 1,
-      "liked": true
-    },
+   
     {
       "name": "kenn kaneki",
       "desc": "last blog",
@@ -26,23 +21,13 @@
     }
   ],
   "signupUsers": [
-    {
-      "fullname": "rushikesh ",
-      "email": "temp@gmail.com",
-      "password": "rushi",
-      "id": 2
-    },
+    
     {
       "fullname": "test",
       "email": "test123@gmail.com",
       "password": "test",
       "id": 3
-    },
-    {
-      "fullname": "blog",
-      "email": "blog@gmail.com",
-      "password": "blog",
-      "id": 4
     }
+    
   ]
 }
