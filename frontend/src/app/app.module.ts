@@ -20,18 +20,25 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
+
 import { MatSortModule } from '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import '@angular/common/locales/global/pt';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './core/components/profile/profile.component';
+
+import { ForgotComponent } from './core/components/forgot/forgot.component';
+import { ResetComponent } from './core/components/reset/reset.component';
+import { CommentCreateComponent } from './shared/components/product-crud/comment-create/comment-create.component';
+
 
 registerLocaleData(localePt);
 
@@ -49,7 +56,13 @@ registerLocaleData(localePt);
     MainComponent,
     SectionComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
+ 
+    ForgotComponent,
+    ResetComponent,
+    CommentCreateComponent
+    
   ],
   imports: [
     BrowserModule,

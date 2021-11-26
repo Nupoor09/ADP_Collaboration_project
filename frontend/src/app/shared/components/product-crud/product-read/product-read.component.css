@@ -13,8 +13,12 @@ th.mat-sort-header-sorted {
 }
 
 .delete > i {
-  color: #e35e6b;
+  color: rgb(0, 174, 255);
 }
+.comment > i {
+  color: green;
+}
+
 
 .heart:hover {
   cursor: pointer;

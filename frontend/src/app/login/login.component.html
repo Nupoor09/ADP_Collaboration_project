@@ -4,7 +4,7 @@
       <div class="card">
         <div class="text-center">
           <h1>Login</h1>
-          <h6>Please enter email & Password !!</h6>
+          
         </div>
 
         <form [formGroup]="loginForm" (ngSubmit)="login()">
@@ -21,7 +21,9 @@
             <small id="emailHelp" class="form-text text-muted"
               >We'll never share your email with anyone else.</small
             >
+            <span class="text-denger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')   " > *Email Id is required</span>
           </div>
+
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <input
@@ -31,20 +33,26 @@
               id="password"
               placeholder="Password"
             />
+            <span class="text-denger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password') " > *Password is required</span>
           </div>
 
           <button
             type="submit"
-            style="margin-left: 12rem"
+            style="margin-left: 11.5rem"
             class="btn btn-primary mb-2 text-center"
+            [disabled]="!loginForm.valid"
           >
             Login</button
           ><br />
           <a
-            style="color: #fff; margin-top: 10px; margin-left: 8.8rem"
+            style="color: white; margin-top: 10px; margin-left: 8.8rem"
             routerLink="/signup"
             >New User ? Click to SignUp !!</a
           >
+           <div class="mb-3">
+              <a routerLink="/forgot" style="color:white; margin-top: 10px; margin-left: 10.0rem">forgot password ?</a>
+            </div>
+          
         </form>
       </div>
     </div>

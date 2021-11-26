@@ -15,7 +15,7 @@ export class ProductCrudComponent implements OnInit {
   ngOnInit(): void {
     this.sectionService.sectionData = {
       icon: 'storefront',
-      title: 'Product registration',
+      title: 'Company Collaboration Form ',
       routerUrl: '/products'
     }
   }

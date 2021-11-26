@@ -12,17 +12,21 @@ export class ProductCreateComponent implements OnInit {
 
   product: ProductData = {
     name: '',
-    desc: null
+    desc: null,
+    liked:true,
+    comment: ''
   };
 
-  constructor(private productService: ProductService, private router: Router) {}
+  constructor(
+    private productService: ProductService,
+    private router: Router) {}
 
   ngOnInit(): void {
   }
 
   createProduct() {
     this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage("Product successfully inserted!");
+      this.productService.showMessage("Post successfully inserted!");
       this.router.navigate(['products']);
     });
   }
@@ -30,5 +34,6 @@ export class ProductCreateComponent implements OnInit {
   cancel() {
     this.router.navigate(['products']);
   }
+
 
 }

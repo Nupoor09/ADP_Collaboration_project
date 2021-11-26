@@ -1,0 +1,18 @@
+
+
+<div class="container">
+    <div class="text-center">Profile Page</div>
+    <div class="card" style="width: 38rem">
+      <div class="card-body" *ngFor="let data of profile"     (onload)="ngOnInit()">
+        <h5 class="card-title">Name:{{ data.fullname }}</h5>
+        <p class="card-text">
+          Email:{{ data.email }}
+      
+        </p>
+      </div>
+          <div class="card-body"  *ngFor="let temp of desc" >
+     <p>    All Post: {{temp.name}} </p>
+      </div>
+    </div>
+  </div>
+  

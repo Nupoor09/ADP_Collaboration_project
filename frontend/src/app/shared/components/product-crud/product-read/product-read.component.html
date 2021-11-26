@@ -15,6 +15,11 @@
       <td mat-cell *matCellDef="let product">{{ product.desc }}</td>
     </ng-container>
 
+    <ng-container matColumnDef="comments">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Comments</th>
+      <td mat-cell *matCellDef="let product">{{ product.comment }}</td>
+    </ng-container>
+
     <ng-container matColumnDef="like">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Like</th>
       <td mat-cell *matCellDef="let product">
@@ -40,6 +45,15 @@
       <td mat-cell *matCellDef="let product">
         <a routerLink="/products/delete/{{ product.id }}" class="delete">
           <i class="material-icons"> delete </i>
+        </a>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="comment">
+      <th mat-header-cell *matHeaderCellDef>Comment</th>
+      <td mat-cell *matCellDef="let product">
+        <a routerLink="/products/comment"class="comment">
+          <i class="material-icons"> comment </i>
         </a>
       </td>
     </ng-container>

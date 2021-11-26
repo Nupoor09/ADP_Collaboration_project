@@ -4,7 +4,7 @@
       <div class="card">
         <div class="text-center">
           <h1>Sign Up</h1>
-          <h6>Register Yourself</h6>
+          <h4>Register Yourself!!</h4>
         </div>
         <form>
           <form [formGroup]="signupForm" (ngSubmit)="signUp()">
@@ -17,6 +17,7 @@
                 id="exampleInputPassword1"
                 placeholder="Full Name"
               />
+              <span class="text-denger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname') " > *Fullname is required</span>
             </div>
 
             <div class="form-group">
@@ -29,10 +30,24 @@
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
+              
               <small id="emailHelp" class="form-text text-muted"
                 >We'll never share your email with anyone else.</small
               >
+              <!-- <span class="text-denger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email') " > *EmailId is required</span> -->
+
+
+              <!-- <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty"> -->
+                <div *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched ||signupForm.controls['password'].dirty ">
+                <small *ngIf=" signupForm.hasError('required','password')" class="text-danger"> Correct email is required</small>
+
+                
+                <small  *ngIf="signupForm.hasError('required','pattern')"class="text-danger">Please provide a valid email address</small>
+              </div>
             </div>
+
+
+
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <input
@@ -42,12 +57,17 @@
                 id="exampleInputPassword1"
                 placeholder="Password"
               />
+              <span class="text-denger" *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+                                     >Password is required and must have atleast 8 characters!</span>
+              <!-- <span class="text-denger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password') " > *Password is required</span> -->
             </div>
 
+                    
             <button
               type="submit"
               style="margin-left: 11.5rem"
               class="btn btn-primary mb-2"
+              [disabled]="!signupForm.valid"
             >
               SignUp
             </button>

@@ -1,0 +1,17 @@
+<p>reset works!</p>
+
+
+<div class="container">
+<form [formGroup]="form" (submit)="submit()">
+    <h1 class="h3 mb-3 fw-normal">Please reset your password</h1>
+  
+    
+  
+    <input formControlName="password" type="password" class="form-control" placeholder="Password" required><br>
+    <input formControlName="password" type="password" class="form-control" placeholder="Confirm Password" required><br>
+    <!-- <input formControlName="password_confirm" type="password" class="form-control" placeholder="Confirm Password" ><br> -->
+    <!-- <input formControlName="password_confirm" type="password_confirm" class="form-control" placeholder="Confirm Password" required><br> -->
+  
+    <button class="w-100 btn btn-lg btn-primary" type="submit" routerLink="/login">Submit</button>
+  </form>
+</div>

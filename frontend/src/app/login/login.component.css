@@ -13,12 +13,15 @@
     hsla(205, 46%, 30%, 1) 05,
     hsla(260, 29%, 30%, 1)
   );
+ 
+ 
 }
 
 .card h1,
 h6 {
-  color: #fff;
+  color: white;
 }
 label {
-  color: #fff;
+
+  color: white;
 }

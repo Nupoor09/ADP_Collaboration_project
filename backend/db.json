@@ -1,33 +1,37 @@
 {
   "products": [
-   
     {
-      "name": "kenn kaneki",
-      "desc": "last blog",
-      "id": 2,
-      "liked": true
-    },
-    {
-      "name": "re",
-      "desc": "adfadf",
-      "id": 3,
-      "liked": true
-    },
-    {
-      "name": "adf",
-      "desc": "adfad",
-      "id": 4,
-      "liked":false
+      "name": "test",
+      "desc": "post 1",
+      "liked": true,
+      "id": 10,
+      "comment": "WOOOOOOOWWWW"
     }
   ],
   "signupUsers": [
-    
     {
       "fullname": "test",
       "email": "test123@gmail.com",
       "password": "test",
       "id": 3
+    },
+    {
+      "fullname": " Nancy ",
+      "email": "nancy@gmail.com",
+      "password": "12345678",
+      "id": 4
+    },
+    {
+      "fullname": "harry",
+      "email": "harrypotter@gmail.com",
+      "password": "123456789",
+      "id": 5
     }
-    
+  ],
+  "resetpassword": [
+    {
+      "newPassword": "",
+      "confirmPassword": ""
+    }
   ]
 }

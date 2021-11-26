@@ -16,7 +16,7 @@ export class ProductReadComponent implements OnInit {
   
   private testProducts: any[]
   products: MatTableDataSource<ProductData>;
-  displayedColumns: string[] = ['id', 'name', 'desc', 'like', 'edit', 'delete'];
+  displayedColumns: string[] = ['id', 'name', 'desc', "comments",'like', 'comment','edit', 'delete'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;

@@ -1,16 +1,16 @@
 <mat-card class="content mat-elevation-z4">
-  <mat-card-title class="title"> Delete product </mat-card-title>
+  <mat-card-title class="title"> Delete post </mat-card-title>
   <mat-card-subtitle class="subtitle">
-    Do you really want to delete the product with id {{ product.id }}?
+    Do you really want to delete the post with id {{ product.id }}?
   </mat-card-subtitle>
 
   <form>
     <mat-form-field>
-      <mat-label>Name</mat-label>
+      <mat-label>Title</mat-label>
       <input
         type="text"
         matInput
-        placeholder="Name"
+        placeholder="Title of the post"
         [value]="product.name"
         name="name"
         disabled
@@ -18,11 +18,11 @@
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>desc </mat-label>
+      <mat-label>description </mat-label>
       <input
         type="text"
         matInput
-        placeholder="desc"
+        placeholder="description"
         [value]="product.desc"
         name="desc"
         disabled

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormBuilder} from '@angular/forms'
+import {FormGroup,FormBuilder, Validators,FormControl} from '@angular/forms'
 import { Router } from '@angular/router';
 
 import { ProductService } from '../shared/services/product.service';
@@ -18,9 +18,13 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.formbuilder.group({
-      fullname: [''],
-      email: [''],
-      password: ['']
+      fullname: ['',Validators.required],
+      // email: ['',Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]
+      email: new FormControl('',[
+        Validators.required,
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
+
+      password: [null, [Validators.required, Validators.minLength(8)]]
     }
     )
   }
@@ -35,4 +39,14 @@ export class SignupComponent implements OnInit {
         alert("Something went wrong !!")
     })
 }
+
+
+title1 = 'email-validation';
+  useremail = new FormGroup({	
+  });
+  
+  get email(){
+    return this.useremail.get('email')
+    }
+  
 }

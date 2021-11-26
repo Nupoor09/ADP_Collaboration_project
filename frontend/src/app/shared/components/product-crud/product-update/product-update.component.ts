@@ -25,7 +25,7 @@ export class ProductUpdateComponent implements OnInit {
   updateProduct() {
     this.productService.update(this.product).subscribe(() => {
       const id = this.product.id;
-      this.productService.showMessage(`The product with id ${id} has been updated successfully!`);
+      this.productService.showMessage(`The post with id ${id} has been updated successfully!`);
       this.router.navigate(['products']);
     });
   }

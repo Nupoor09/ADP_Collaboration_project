@@ -3,11 +3,12 @@
     position: fixed;
     bottom: 0vh;
     padding: 20px;
-    height: 70px;
+    height: 50px;
     background-color: #EEE;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity:0.5;
 }
 
 .footer span {

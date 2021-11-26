@@ -1,23 +1,23 @@
 <mat-card class="content mat-elevation-z4">
-  <mat-card-title class="title">New product</mat-card-title>
+  <mat-card-title class="title">New Post</mat-card-title>
 
   <form>
     <mat-form-field>
-      <mat-label>Name</mat-label>
+      <mat-label>Title</mat-label>
       <input
         type="text"
         matInput
-        placeholder="Name"
+        placeholder="Title of the post"
         [(ngModel)]="product.name"
         name="name"
       />
     </mat-form-field>
     <mat-form-field>
-      <mat-label>desc </mat-label>
+      <mat-label>description </mat-label>
       <input
         type="text"
         matInput
-        placeholder="desc  "
+        placeholder="description "
         [(ngModel)]="product.desc"
         name="desc"
       />
@@ -28,4 +28,5 @@
     Save
   </button>
   <button mat-raised-button (click)="cancel()">Cancel</button>
+
 </mat-card>

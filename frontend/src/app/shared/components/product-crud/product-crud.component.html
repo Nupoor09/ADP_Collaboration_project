@@ -1,7 +1,22 @@
-<div class="content">
-  <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
-    New Blog
-  </button>
 
-  <app-product-read></app-product-read>
+
+<div class="content" >
+  <div class="temp">
+  <div>
+  <button mat-raised-button (click)="navigateToProductCreate()" color="primary">
+    Add New Post
+  </button>
+</div>
+
+<div>
+  <button mat-raised-button routerLink="/profile" color="primary">
+    <i class="material-icons">
+      person
+     </i> 
+    Profile
+  </button>
+</div>
+
+</div>
+<app-product-read></app-product-read>
 </div>

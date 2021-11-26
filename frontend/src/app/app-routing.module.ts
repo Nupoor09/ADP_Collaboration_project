@@ -7,6 +7,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component'
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './core/components/profile/profile.component';
+
+import { ForgotComponent } from './core/components/forgot/forgot.component';
+import { ResetComponent } from './core/components/reset/reset.component';
+import { CommentCreateComponent } from './shared/components/product-crud/comment-create/comment-create.component';
 
 const routes: Routes = [
   {
@@ -26,6 +31,7 @@ const routes: Routes = [
     path: "products",
     component: ProductCrudComponent
   },
+
   {
     path: "products/create",
     component: ProductCreateComponent
@@ -37,7 +43,29 @@ const routes: Routes = [
   {
     path: "products/delete/:id",
     component: ProductDeleteComponent
-  }
+  },
+  {
+    path: "profile", 
+    component: ProfileComponent
+  },
+ 
+  {
+    path: "forgot", 
+    component:ForgotComponent
+  },
+  // {
+  //   path: "reset/:token", 
+  //   component:ResetComponent
+  //  }
+   {
+    path: "reset", 
+    component:ResetComponent
+   },
+   {
+    path: "products/comment", 
+    component:CommentCreateComponent
+   }
+
 ];
 
 @NgModule({

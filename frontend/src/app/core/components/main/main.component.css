@@ -1,6 +1,10 @@
 main {
     min-height: 100%;
     padding-bottom: 80px;
+    background-image: url("../../../../assets/imgs/img1.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+
 }
 
 @media (min-width: 768px) {

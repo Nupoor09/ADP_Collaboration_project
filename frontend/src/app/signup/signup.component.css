@@ -13,10 +13,12 @@
     hsla(205, 46%, 30%, 1) 05,
     hsla(260, 29%, 30%, 1)
   );
+  /* opacity: 0.5; */
+ 
 }
 
 .card h1,
-h6 {
+h4 {
   color: #fff;
 }
 label {

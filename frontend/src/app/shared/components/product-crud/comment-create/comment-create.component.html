@@ -1,0 +1,25 @@
+
+
+<mat-card class="content mat-elevation-z4">
+    <mat-card-title class="title">Comment</mat-card-title>
+  
+    <form>
+     
+      <mat-form-field>
+        <mat-label>Comment </mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Comment here"
+          [(ngModel)]="comment.comment"
+          name="comment" 
+        />
+      </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="createComment()"> Comment 
+  </button>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    
+  </mat-card>
+
